@@ -88,7 +88,7 @@ def main():
 	#print(auth_info)
 
 if __name__ == '__main__':
-	try:
-		main()
-	except rospy.InterruptExption:
-		pass
+    try:
+        main()
+    except rospy.ROSInterruptException:
+	pass
