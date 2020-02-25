@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>EMAR_mechatronics</name>
+  <version>0.0.0</version>
+  <description>Messages Unique for EMAR Mechatronics</description>
+  <author>Nick Armstrong</author>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <maintainer email="nma23@uw.edu">Nick Armstrong</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <run_depend>message_runtime</run_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

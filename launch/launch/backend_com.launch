@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="backend_com" type="serv" name="serv_listen">
+    </node>
+ 
+  <node pkg="backend_com" type="serv" name="serv_pub">
+    </node>
+</launch>
