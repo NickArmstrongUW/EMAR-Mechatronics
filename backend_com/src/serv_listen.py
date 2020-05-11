@@ -4,7 +4,7 @@ import time
 import json
 import rospy
 from std_msgs.msg import String
-from msg import WoZCommand
+from emar_msg import WoZCommand
 from numpy import array_equal
 
 def main():
@@ -91,4 +91,4 @@ if __name__ == '__main__':
     try:
         main()
     except rospy.ROSInterruptException:
-	pass
+		pass

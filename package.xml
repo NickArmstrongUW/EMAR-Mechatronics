@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>EMAR_mechatronics</name>
+  <name>emar_mechatronics</name>
   <version>0.0.0</version>
-  <description>The EMAR_mechatronics package</description>
+  <description>The emar_Mechatronics package</description>
   <author>Nick Armstrong</author>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
@@ -12,7 +12,9 @@
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <license>BSD</license>
-
+  <!-- For Message Generation-->
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>

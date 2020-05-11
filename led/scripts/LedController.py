@@ -39,6 +39,9 @@ import serial
 import rospy
 from std_msgs.msg import String
 
+currentState = 'idle'
+nextState = 'idle'
+
 ser = serial.Serial(
         port = '/dev/ttyS0',
         baudrate = 115200,
@@ -48,10 +51,26 @@ ser = serial.Serial(
         timeout = 1
 )
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.values)
-    ser.write('setLED' + data.values)
-    # Turn on to confirm color change
-    ser.write("on")
+    if currentState is 'breathingIdle':
+        print(currentState)
+    elif currentState is 'greeting':
+        print(currentState)
+    elif currentState is 'breathingActive':
+        print(currentState)
+    elif currentState is 'bandEmotion':
+        print(currentState)
+    elif currentState is 'headEmotion':
+        print(currentState)
+    elif currentState is 'disclosure':
+        print(currentState)
+    elif currentState is 'mood':
+        print(currentState)
+    elif currentState is 'stress':
+        print(currentState)
+    elif currentState is 'WoZCommand':
+        print(currentState)
+    
+        
 
 def listener():
     
@@ -72,5 +91,21 @@ def listener():
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
 
+def main():
+    currentState = 'idle'
+    nextState = 'idle'
+    listener()
+    while not rospy.is_shutdown():
+        # !!! For WoZCommand State
+        rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.values)
+        ser.write('setLED' + data.values)
+        # Turn on to confirm color change
+        ser.write("on")
+        # !!!
+
+
 if __name__ == '__main__':
-    LedColorSet()
+    try:
+        main()
+    except rospy.ROSInterruptException:
+	    pass

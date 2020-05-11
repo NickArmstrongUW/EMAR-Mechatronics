@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-from msg import WoZCommand
+from emar_msg import WoZCommand
+import rospy
 
 def callback(data):
   #set neck to value

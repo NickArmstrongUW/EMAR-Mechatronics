@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(std_msgs)
+project(emar_msg)
 
 find_package(catkin REQUIRED COMPONENTS 
   rospy
@@ -8,8 +8,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_message_files(
   FILES
-  hapticMsg
-  WoZCommand
+  hapticMsg.msg
+  WoZCommand.msg
 )
 
 generate_messages(
@@ -18,8 +18,10 @@ generate_messages(
 )
 
 catkin_package(
-  INCLUDE_DIRS include
-  CATKIN_DEPENDS message_runtime)
+  CATKIN_DEPENDS 
+  message_runtime
+  std_msgs
+)
 
 install(DIRECTORY include/std_msgs/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
